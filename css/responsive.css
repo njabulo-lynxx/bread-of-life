@@ -1,9 +1,40 @@
+/*Updating CSS to mobile view only*/
+
+@media (min-width: 900px) {
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logo {
+    width: 200px;
+  }
+
+  .nav-links {
+    display: flex;
+    position: static;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+    width: auto;
+    padding: 0;
+    box-shadow: none;
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+}
+
+/**/
+
+
+
+
 /* RESPONSIVE DESIGN */
 
 @media (max-width: 1000px) {
-  .nav-links {
-    gap: 20px;
-  }
 
   .visit-btn {
     margin-left: 15px;
@@ -23,48 +54,6 @@
 }
 
 @media (max-width: 768px) {
-  header {
-    height: 85px;
-  }
-
-  .navbar {
-    width: 88%;
-  }
-
-  .logo {
-    width: 150px;
-  }
-
-  .menu-toggle {
-    display: block;
-  }
-
-  .nav-links {
-    display: none;
-    position: absolute;
-    top: 85px;
-    left: 0;
-    width: 100%;
-    background: var(--white);
-    flex-direction: column;
-    gap: 0;
-    padding: 15px 0;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-  }
-
-  .nav-links.show {
-    display: flex;
-  }
-
-  .nav-links a {
-    width: 100%;
-    text-align: center;
-    padding: 15px;
-  }
-
-  .nav-links a.active::after {
-    display: none;
-  }
 
   .visit-btn {
     margin: 10px auto;

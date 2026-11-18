@@ -1,48 +1,47 @@
-/* HEADER */
-
+/*Updating CSS to mobile view only*/
 header {
-  height: 116px;
-  background: var(--white);
-  display: flex;
-  align-items: center;
-  position: relative;
-  z-index: 10;
+    height: 100px;
 }
 
-.navbar {
-  width: 90%;
-  max-width: 1200px;
-  margin: auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .logo {
-  width: 200px;
-  position: relative;
-  z-index: 20;
+    width: clamp(150px, 20vw, 200px);
+    position: relative;
+    z-index: 20;
 }
 
 .logo img {
-  width: 100%;
-  height: auto;
+    width: 100%;
+    height: auto;
 }
 
 .nav-links {
-  display: flex;
-  align-items: center;
-  gap: 25px;
-  margin-left: auto;
-  text-transform: uppercase;
+    display: none;
+    list-style: none;
+    flex-direction: column;
+    position: absolute;
+    top: 85px;
+    left: 0;
+    width: 100%;
+    padding: 15px 0;
+
+    align-items: center;
+    gap: 25px;
+    margin-left: auto;
+    text-transform: uppercase;
 }
 
 .nav-links a {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 700;
   color: var(--navy);
   position: relative;
-  padding: 10px 10px;
+  padding: 10px;
   transition: 0.3s ease;
 }
 
@@ -50,15 +49,21 @@ header {
   color: var(--gold);
 }
 
-.nav-links a.active::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -10px;
-  width: 65px;
-  height: 3px;
-  background: var(--gold);
+.nav-links.show {
+    display: flex;
 }
+
+.menu-toggle {
+    display: block;
+    font-size: 30px;
+    cursor: pointer;
+    color: var(--navy);
+    background: inherit;
+    border: none;
+}
+/**/
+
+/* HEADER */
 
 .visit-btn {
   margin-left: 0;
@@ -71,13 +76,4 @@ header {
 
 .visit-btn:hover {
   background: var(--dark-gold);
-}
-
-/* MOBILE MENU */
-
-.menu-toggle {
-  display: none;
-  font-size: 26px;
-  cursor: pointer;
-  color: var(--navy);
 }
